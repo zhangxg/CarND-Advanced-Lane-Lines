@@ -82,9 +82,11 @@ Using these configuration, I verified that my perspective transforming was worki
 The detail of identificatio of lane line pixels is given in the notebook section "Rubric 2-4, indentifying the lane line pixels". I used the "sliding window" methods given by the lecture and find the pixel points which were used to fit the ploynomial line, numpy's built-in method `polyfit()` was used for the heavy load. The implementation was tested on  test images, result showed below: 
 
 good fit: 
+
 ![good fit](./img4report/good_fit.png)
 
 bad fit: 
+
 ![good fit](./img4report/bad_fit.png)
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -110,7 +112,7 @@ Then I applied them in the test image and calculated the curvature at the bottom
 
 I implementated a `pipe_line()` which first undistorted the test image using the calibrated camera matrix, then the undistorted image is applied to a combined threshing, then the threshholed binary image was given to warp function to do the perspective transformation, then the ploynomial was fit and the intendifid lane were drew back to the orinial image. The details are given in section "Rubric 2-6 pipline", one of the negerated image is like this:
 
-![piplined image](./img4report/pipline.png)
+![piplined image](./img4report/pipeline.png)
 
 ---
 
